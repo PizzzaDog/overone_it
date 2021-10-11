@@ -26,7 +26,6 @@ public class Main {
         System.out.println(stroka);
         a = 100;
         System.out.println(a);
-
         Integer chislo = 100;
         System.out.println(chislo.doubleValue());
 
