@@ -1,4 +1,4 @@
-package a.a.zenko.lesson3;
+package zenko_Lesson3;
 
 public class PullReqeust {
 }
