@@ -28,19 +28,7 @@ public class Task3 {
         }
         else System.out.println("Error");
 
-        if((pass3 >= 1000) && (pass3 <= 9999)){
-            Switch (pass3) {
-                case pass1:
-                    System.out.println("Hello");
-                    break;
 
-                case pass2:
-                    System.out.println("Hello, change tour password");
-                    break;
-
-                default:
-                    System.out.println("Wrong password");
-                    break;
             }
 
         }
