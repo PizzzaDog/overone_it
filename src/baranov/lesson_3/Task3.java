@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import java.lang.String;
 
-public class Task3 {
+public class Task3{
 
     public static void main(String[] args) {
 
@@ -30,7 +30,6 @@ public class Task3 {
 
             }
 
-        }
-
-    }
 }
+
+
