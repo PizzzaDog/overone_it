@@ -28,7 +28,6 @@ public class Task3 {
         }
         else System.out.println("Error");
 
-
             }
 
         }
