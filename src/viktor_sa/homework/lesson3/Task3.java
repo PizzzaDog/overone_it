@@ -23,9 +23,7 @@ public class Task3 {
         System.out.print("Please, enter your password: ");
         String enterPassword = scan.nextLine();
 
-        String incorrectPassword = enterPassword.length() != 4 ? "Wrong" : "Wrong!";
-
-        switch (enterPassword) {
+        /**   switch (enterPassword) {
             case "1111":
                 System.out.println("Hello");
                 break;
@@ -41,17 +39,17 @@ public class Task3 {
             default:
                 System.out.println("Wrong Password");
         }
-
-        /**       if (enterPassword == mainPassword) {
+*/
+              if (enterPassword.equals(mainPassword)) {
          System.out.println("Hello");
-         } else if (enterPassword == reservPassword) {
+         } else if (enterPassword.equals(reservPassword)) {
          System.out.println("Hello, change your password");
-         } else if (enterPassword != mainPassword || enterPassword != reservPassword) {
+         } else if (!enterPassword.equals(mainPassword) || enterPassword != reservPassword) {
          System.out.println("Wrong Password");
          } else {
          System.out.println("Error");
          }
-         */
+
         scan.close();
     }
 }
