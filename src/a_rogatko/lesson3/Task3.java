@@ -15,10 +15,10 @@ public class Task3 {
         if (inputPassword / 1000 < 1 || inputPassword / 1000 > 10) {
             System.out.print("Error же..."); //проверяем количество цифр и реагируем
         }
-        else if (inputPassword == 1111) {
+        else if (inputPassword == password) {
             System.out.print("Hello");//проверяем на соответствие первому паролю и реагируем
         }
-        else if (inputPassword == 9999) {
+        else if (inputPassword == password1) {
             System.out.print("Hello, change your password");// проверяем на соответствие второму паролю и реагируем
         }
         else {
