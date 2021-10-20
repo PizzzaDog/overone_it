@@ -23,7 +23,5 @@ public class Task3_stanislaw {
 
             }
         }
-
-
     }
 }
