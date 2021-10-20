@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Task2_stanislaw {
     public static void main(String[] args) {
-        int ars, i;
-        for (ars = 0; ars < 20; ars++) {
+        int i;
+        for (int ars = 0; ars < 20; ars++) {
             Random random = new Random();
-            i = random.nextInt(21);
+            i = random.nextInt(20);
             if (i<=10)
                 System.out.println(i);
                else if (i > 10&&i<=14)

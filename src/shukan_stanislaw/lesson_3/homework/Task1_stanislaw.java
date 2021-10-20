@@ -7,7 +7,7 @@ public class Task1_stanislaw {
         int ars,i;
         for(ars=0;ars<20;ars++){
             Random random = new Random();
-            i=random.nextInt(21);
+            i=random.nextInt(20);
             if(i>10){
                 System.out.println(i+"*");
             }
