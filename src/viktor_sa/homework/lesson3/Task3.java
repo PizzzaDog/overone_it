@@ -17,39 +17,28 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String mainPassword = "1111";
-        String reservPassword = "2222";
+        final String mainPassword = "1111";
+        final String reservPassword = "2222";
 
         System.out.print("Please, enter your password: ");
         String enterPassword = scan.nextLine();
 
         if (enterPassword.length() != 4) {
             System.out.println("Error");
-        }
-
-        switch (enterPassword) {
-            case "1111": //mainPassword
-                System.out.println("Hello");
-                break;
-
-            case "2222": //reservPassword
-                System.out.println("Hello, change your password");
-                break;
-
-            default:
-                System.out.println("Wrong Password");
-        }
-
-/**        if (enterPassword.equals(mainPassword)) {
-            System.out.println("Hello");
-        } else if (enterPassword.equals(reservPassword)) {
-            System.out.println("Hello, change your password");
-        } else if (enterPassword.length() != 4) {
-            System.out.println("Error");
         } else {
-            System.out.println("Wrong password");
+
+            switch (enterPassword) {
+                case mainPassword:
+                    System.out.println("Hello");
+                    break;
+
+                case reservPassword:
+                    System.out.println("Hello, change your password");
+                    break;
+
+                default:
+                    System.out.println("Wrong Password");
+            }
         }
-*/
-        scan.close();
     }
 }
