@@ -1,7 +1,4 @@
 package shukan_stanislaw.lesson_3.homework;
-
-import java.io.OutputStream;
-
 public class Task4_stanislaw {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
