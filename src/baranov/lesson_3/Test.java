@@ -6,7 +6,6 @@ public class Test {
     public static void main(String[] args) {
 
         int answer, k = 0;
-        boolean right;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("вводите номер ответа на вопрос ");
@@ -17,7 +16,6 @@ public class Test {
         answer = scan.nextInt();
 
         if (answer == 1) k++;
-        else right = false;
 
         System.out.println();
 
@@ -27,7 +25,6 @@ public class Test {
         answer = scan.nextInt();
 
         if (answer == 2) k++;
-        else right = false;
 
         System.out.println();
 
