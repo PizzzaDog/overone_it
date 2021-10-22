@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import java.lang.String;
 
-public class Task3{
+public class Task3 {
 
     public static void main(String[] args) {
 
@@ -20,15 +20,14 @@ public class Task3{
         System.out.println("авторизуйтесь");
         pass3 = scan.nextInt();
 
-        if((pass3 >= 1000) && (pass3 <= 9999)){
+        if ((pass3 >= 1000) && (pass3 <= 9999)) {
 
-            if(pass3 == pass1) System.out.println("Hello");
+            if (pass3 == pass1) System.out.println("Hello");
             else if (pass3 == pass2) System.out.println("Hello, change your password");
             else System.out.println("Wrong password");
-        }
-        else System.out.println("Error");
+        } else System.out.println("Error");
 
-            }
+    }
 
 }
 
