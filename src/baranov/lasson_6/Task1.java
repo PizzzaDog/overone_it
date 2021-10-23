@@ -6,7 +6,7 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        String[] mass = new String[] {"страница", "матрица", "дом", "рама"};
+        String[] mass = new String[]{"страница", "матрица", "дом", "рама"};
         int k = 0;
 
         for (int i = 0; i < mass.length; i++) {
@@ -50,7 +50,7 @@ public class Task1 {
             }
 
         }
-        System.out.println("количество гласных равно" + k);
+        System.out.println("количество гласных всего равно" + k);
     }
 
 }

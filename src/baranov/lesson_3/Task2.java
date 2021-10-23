@@ -9,125 +9,13 @@ public class Task2 {
         Random random = new Random();
         int a;
 
-        a = random.nextInt(21);
+        for (int i = 1; i <= 20; i++) {
+            a = random.nextInt(21);
 
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-        else System.out.println(a + "*");
-
-        a = random.nextInt(21);
-
-        if (a <= 10) System.out.println(a);
-        else if (a <= 14) System.out.println(a + "**");
-             else System.out.println(a + "*");
+            if (a <= 10) System.out.println(a);
+            else if (a <= 14) System.out.println(a + "**");
+            else System.out.println(a + "*");
+        }
 
     }
 

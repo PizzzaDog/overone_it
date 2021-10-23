@@ -10,7 +10,7 @@ public class RedandBlack {
 
         Scanner scan = new Scanner(System.in);
         int bet = 0;
-        int choice = 2;//присваиваем число не равное 1 и 0(на всякий случай)
+        int choice = 0;
 
         Random r = new Random();
         int result = 0;

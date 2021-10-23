@@ -46,6 +46,5 @@ public class Test {
 
         System.out.println("Количество правильных ответов равно " + k);
 
-
     }
 }
