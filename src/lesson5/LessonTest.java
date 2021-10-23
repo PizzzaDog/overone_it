@@ -1,4 +1,4 @@
-package a_rogatko.lesson3;
+package lesson5;
 //Проходим тест)))
 
 
