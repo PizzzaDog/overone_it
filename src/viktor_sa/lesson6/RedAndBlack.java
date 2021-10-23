@@ -12,7 +12,6 @@ public class RedAndBlack {
         int result;
         Random rn = new Random();
 
-
         while (wallet > 0 && wallet < 200) { // Цикл работает пока кошелек не пуст или не перевышает 200
             System.out.println("Ваш баланс составляет: " + wallet);
             System.out.println("Сделайте вашу ставку: ");
@@ -28,17 +27,11 @@ public class RedAndBlack {
 
             if (choice == result) {
                 wallet += bet;
-                System.out.println("Вы победили! Ваш выйгрыш соствил: " + bet*2);
+                System.out.println("Вы победили! Ваш выйгрыш соствил: " + bet * 2);
             } else {
                 wallet -= bet;
                 System.out.println("Ставка не сыграла!");
             }
-
         }
-
-
-
     }
-
-
 }

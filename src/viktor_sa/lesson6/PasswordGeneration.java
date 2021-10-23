@@ -15,12 +15,11 @@ public class PasswordGeneration {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         Random rn = new Random();
-        String systemPass = "";
-        String password;
+        StringBuilder reservPass = new StringBuilder();
         int temp = 0;
-
- //       System.out.print("Здравствуйте, придумайте себе 4-х значный пароль:");
-//        password = sc.nextLine();
+        System.out.print("Здравствуйте, придумайте себе 4-х значный пароль: ");
+        String mainPass = sc.nextLine();
+        System.out.println("Ваш резервный пароль сгенерируется системой.");
 
         for (int k = 0; k < 4; k++) {
 
@@ -32,20 +31,28 @@ public class PasswordGeneration {
 
             }
             System.out.print(temp);
-            systemPass += temp;
+            reservPass.append(temp);
         }
 
-        System.out.println("\rВаш пароль: " + systemPass + ".. Исчезнет через: ");
+        System.out.print("\rВаш резервный пароль: " + reservPass + ".. Исчезнет через: ");
 
         for (int i = 5; i > 0; i--) {
             System.out.print(i);
-            Thread.sleep(500);
+            Thread.sleep(1000);
             System.out.print("\b");
         }
 
         System.out.print("\r ");
 
+        System.out.print("Для входа в систему введите пароль: ");
+        String inputPass = sc.nextLine();
+        if (inputPass.equals(mainPass)) {
+            System.out.println("Приветствуем, вы вошли в систему.");
+        } else if (inputPass.equals(reservPass.toString())) {
+            System.out.println("Приветствуем, вы ввели резервный пароль для входа в систему, пожалуйста, измените ваш основной пароль.");
+        } else {
+            System.out.println("Вы ввели неверный пароль.");
+        }
 
-     //   System.out.println("Ваш системный пароль: " + systemPass);
     }
 }
