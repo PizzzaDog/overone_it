@@ -18,33 +18,33 @@ public class Test {
             case 1: {
                 System.out.println( "Java типы данных \n  1. Выберите примитив \n а.Integer \t b.Float \t c.boolean ");
               score=  otvet(c, score);
-                System.out.println("  2. Выберите примитив \n а.int \t b.Float \t c.Boolean ");
+                System.out.println("  2.Выбери значение типа int  \n а.5 \t b.2.85 \t c.Hello! ");
                score= otvet(a,score);
-                System.out.println(" 3. Выберите примитив \n а.double \t b.Float \t c.String ");
-               score=  otvet(a,score);
+                System.out.println(" 3. Что выведится в консоль \n int s=50, a=45;\nSystem.out.print(s) \n а.45 \t b.15 \t c.50 ");
+               score=  otvet(c,score);
                 break;
             }
 
             case 2: {
-                System.out.println("Java условные операторы");
-                System.out.println( " 1. Выберите условные операторы \n а.Integer \t b.Float \t c.boolean ");
-                score=  otvet(c, score);
-                System.out.println(" 2. Выберите примитив \n а.int \t b.Float \t c.Boolean ");
+                System.out.println("Java условные операторы ветвления");
+                System.out.println( " 1. Выберите условные операторы \n а.if \t b.System.out.print() \t c.case ");
+                score=  otvet(a, score);
+                System.out.println(" 2. Продолжите\n swich(i){...} \n а.case \t b.break \t c.else ");
                 score= otvet(a,score);
-                System.out.println(" 3. Выберите примитив \n а.double \t b.Float \t c.String ");
-                score=  otvet(a,score);
+                System.out.println(" 3. Что выведится в консоль\n int i=2;\n if(i=2){System.out.print(i)}\n else System.out.print(i-5) \n а.2 \t b.Будет ошибка \t c.-3 ");
+                score=  otvet(b,score);
 
                 break;
             }
 
             case 3: {
                 System.out.println("Java циклы");
-                System.out.println( " 1. Выберите примитив \n а.Integer \t b.Float \t c.boolean ");
-                score=  otvet(c, score);
-                System.out.println(" 2. Выберите примитив \n а.int \t b.Float \t c.Boolean ");
-                score= otvet(a,score);
-                System.out.println(" 3. Выберите примитив \n а.double \t b.Float \t c.String ");
-                score=  otvet(a,score);
+                System.out.println( " 1. Выберите цикл \n а.do \t b.for \t c.if ");
+                score=  otvet(b, score);
+                System.out.println(" 2. Продолжие\n for(...) \n а.int i=1; i++; i=45 \t b.int i<20; i=20 \t c.int i=1; i<=45;i++ ");
+                score= otvet(c,score);
+                System.out.println(" 3. Что выведится в консоль\n int i=4;\n do{\n System.out.print(i)} \n while(i<3)\n а.Ошибка \t b.4 \t c.3 ");
+                score=  otvet(b,score);
                 break;
             }
 
