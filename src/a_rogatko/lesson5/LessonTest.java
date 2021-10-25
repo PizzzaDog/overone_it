@@ -1,4 +1,4 @@
-package lesson5;
+package a_rogatko.lesson5;
 //Проходим тест)))
 
 
@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class LessonTest {
     public static void main(String[] args) {
         int result = 0; //переменная для результатов теста
-        DataForTest MyData = new DataForTest(); //создаем класс, в котором хранятся наши данные
+        DataForTest myData = new DataForTest(); //создаем класс, в котором хранятся наши данные
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < MyData.amount; i++) { //цикл, проходимся по ответам
-            System.out.println(MyData.txt[i]); //выводим вопрос в консоль
+        for (int i = 0; i < myData.amount; i++) { //цикл, проходимся по ответам
+            System.out.println(myData.txt[i]); //выводим вопрос в консоль
             int temp = scanner.nextInt(); //получаем номер варианта ответа
-            if (temp == MyData.numberForAnswer[i]) { //проверяем, правильный ли ответ
+            if (temp == myData.numberForAnswer[i]) { //проверяем, правильный ли ответ
                 result++; //если ответ правильный, прибавляем единицу к результату
 
             }
@@ -24,7 +24,7 @@ public class LessonTest {
         String uncertainty = "а"; //начинаем добавлять правильные окончания к выводу результата
         if (result == 1) uncertainty = "";
         if (result == 0) uncertainty = "ов"; // заканчиваем это дело)))
-        System.out.println("Отвечено правильно на " + result + " вопрос" + uncertainty + " из " + MyData.amount); //выводим результат в консоль
+        System.out.println("Отвечено правильно на " + result + " вопрос" + uncertainty + " из " + myData.amount); //выводим результат в консоль
     }
 
 }
