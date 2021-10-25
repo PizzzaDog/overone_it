@@ -1,4 +1,4 @@
-package a_rogatko.lesson7.task0;
+package a_rogatko.lesson7.human;
 
 public class Dog {
     String name;
