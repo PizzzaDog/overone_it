@@ -12,6 +12,7 @@ public class Task1 {
         for (int i = 0; i < mass.length; i++) {
             System.out.println("слово " + mass[i]);
             System.out.println("длинна равна " + mass[i].length());
+            System.out.println();
             char[] ch = mass[i].toCharArray();
             for (int j = 0; j < ch.length; j++) {
                 switch (ch[j]) {
@@ -50,7 +51,7 @@ public class Task1 {
             }
 
         }
-        System.out.println("количество гласных всего равно" + k);
+        System.out.println("количество гласных всего равно " + k);
     }
 
 }
