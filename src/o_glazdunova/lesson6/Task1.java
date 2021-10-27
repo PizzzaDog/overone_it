@@ -9,7 +9,6 @@ public class Task1 {
             System.out.println(k.length());//выводим длину каждого слова в панель
         }
 
-
         for (String k : name) {
             int s = 0;//пристаеваем согласным имя
             for (int i = 0; i < k.length(); i++) { //создаем цикл,чтобы приминить к каждой ячейке условие
