@@ -4,6 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MainTask {
+    static int wallet = 0; // Создаем кошелек
+    static int bet = 0; // переменная для ставок
+    static int choice = 0; // Переменная для 0 или 1
+    static int result = 0;
     static Scanner sc = new Scanner(System.in);
     static Random r = new Random();
 
@@ -14,13 +18,13 @@ public class MainTask {
         play();
     }
 
-    public static void game(GameCase game) {
-        init(game);
-        play(game);
+    public static void game() {
+        init();
+        play();
     }
 
-    private static void play(GameCase game) {
-        while (game.wallet > 0) {
+    private static void play() {
+        while (wallet > 0) {
             bet();
             colorBet();
             total();
