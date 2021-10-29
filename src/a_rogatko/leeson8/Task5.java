@@ -1,3 +1,5 @@
+package a_rogatko.leeson8;
+
 import java.util.Scanner;
 public class Task5{
 
@@ -35,6 +37,8 @@ class Run {
                 base.setData(clients, name, tempKr, tempN, tempK);
                 clients++;
             } else {
+                System.out.println("У нас нет столько еды");
+                System.out.println("Осталось "+kr+" крылышек "+n+" ножек "+k+" картошек");
                 start();
             }
         }
