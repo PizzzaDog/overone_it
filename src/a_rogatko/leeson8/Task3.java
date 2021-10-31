@@ -16,6 +16,7 @@ public class Task3 {
             }
 
 
-        }System.out.print("\b\b");
+        }
+        System.out.print("\b\b.");
     }
 }

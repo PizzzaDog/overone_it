@@ -7,8 +7,10 @@ public class MyGame {
         Game.run();
     }
 }
+
 class Wallet {//Класс для хранения данных кошелька
     private static int balance; //Переменная кошелька, сколько денях
+
     static boolean payment(int pay) { //Метод для внесения денег на счет, с возможностью проверки успешности операции
         if (pay > 0) {
             balance = balance + pay;
@@ -18,6 +20,7 @@ class Wallet {//Класс для хранения данных кошелька
         }
 
     }
+
     static boolean debit(int debitOfBalance) { //Метод для списания денег с кошелька с возможностью проверки успешности операции
         if (debitOfBalance > 0) {
             balance = balance - debitOfBalance;
@@ -26,15 +29,19 @@ class Wallet {//Класс для хранения данных кошелька
             return false;
         }
     }
+
     static int viewBalance() {//Метод получения данных о сумме в кошельке
         return balance;
     }
+
     static void forceSetBalance(int newBalance) {//Метод принудительной установки суммы в кошельке, в данной программе испоьзоваться не будет
         balance = newBalance;
     }
 }
+
 class Game {//Класс игры
-    static	void run() throws InterruptedException {//Метод игры, основной и единственный, т.к. в других не видел особого смысла
+
+    static void run() throws InterruptedException {//Метод игры, основной и единственный, т.к. в других не видел особого смысла
         int summBet = 0;//Переменная суммы ставки
         System.out.print("Вас приветствует наше казино для умственно отсталых");
         Thread.sleep(1000);
@@ -45,7 +52,6 @@ class Game {//Класс игры
             System.out.println("Введите сумму пополнения баланса");
 
             Wallet.payment(scanner.nextInt());//Собственно, вызов самого метода пополнения
-
 
 
         }
@@ -62,8 +68,8 @@ class Game {//Класс игры
             }
             System.out.println("Выберите 1/0 ?");
             int bet = scanner.nextInt();
-            if (bet == (int)((Math.random() * 2))) {//Сравниваем ставку с результатом генератора псевдослучайных чисел
-                System.out.println("Поздравляем! \n Вы выиграли "+summBet);
+            if (bet == (int) ((Math.random() * 2))) {//Сравниваем ставку с результатом генератора псевдослучайных чисел
+                System.out.println("Поздравляем! \n Вы выиграли " + summBet);
                 Wallet.payment(summBet);//зачисление суммы ставки
                 System.out.println("Ваш баланс: " + Wallet.viewBalance());//Демонстрация баланса
             } else {
