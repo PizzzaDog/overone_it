@@ -15,10 +15,15 @@ public class Task3 {
         for (int j : array) {
             if (j % 2 == 0) {
                 summa = j / 10 + j % 10;
-                System.out.print(summa + ", ");
+
+                if (j > 100) {
+                    summa = j / 100 + j % 10 + (j / 100 - j % 10 / 10);
+                }
+                System.out.print (summa + ", ");
             }
 
         }
         System.out.print('\r' + '\b' + ".");
     }
+
 }
