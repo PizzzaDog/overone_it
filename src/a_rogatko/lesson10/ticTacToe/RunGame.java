@@ -21,7 +21,7 @@ public class RunGame {
                 isWinner = true;
 
                 System.out.println("Победили " + (WinChecker.allCheck(f.field)));
-                System.out.println("\r");
+
             }
 
 
@@ -43,8 +43,7 @@ public class RunGame {
 
                     }
                 }
-                //
-                // f.pointSet(a,b,'+');
+
             } else {
                 if (!isWinner) Robot.step(f);
             }

@@ -11,7 +11,7 @@ public class Robot {
             int j = (int) (Math.random() * 3) + 1;
             if (f.pointGet(i, j) != f.x && f.pointGet(i, j) != f.o) {
                 f.pointSet(i, j, 'o');
-                System.out.println("****** " + i + " ***** " + j);
+                System.out.println("****** " + i + " ***** " + j);//не совсем красиво, что робот выводит свой ход в консоль из своего метода
                 use = true;
             }
 

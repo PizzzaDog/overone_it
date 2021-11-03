@@ -2,7 +2,7 @@ package a_rogatko.lesson10.ticTacToe;
 
 //Проверка на победу
 public class WinChecker {
-    char[][] win = new char[3][3];
+
 
     static char allCheck(char[][] field) {
         for (int i = 0; i < field.length; i++) {//в цикле перебираем ячейки игрового поля по горизонтали и вертикали
