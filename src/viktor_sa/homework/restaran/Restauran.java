@@ -19,6 +19,8 @@ public class Restauran {
     static Client client4 = new Client();
     static Client client5 = new Client();
 
+    static Client[] clients = new Client[] {client1, client2, client3, client4, client5};
+
 //    static Client[] clientsName = new Client[Client.maxClients];
 //    static Client[] clientsOrderWings = new Client[Client.maxClients];
 //    static Client[] clientsOrderLegs = new Client[Client.maxClients];
@@ -28,16 +30,15 @@ public class Restauran {
     private static void run() {
 
         while (Menu.wings != 0 || Menu.legs != 0 || Menu.potatoes != 0 || Client.clientQuantity < 6) {
-            hello(client1);
-            order(client1);
-            hello(client2);
-            order(client2);
-            hello(client3);
-            order(client3);
-            hello(client4);
-            order(client4);
-            hello(client5);
-            order(client5);
+            for(Client a : clients) {
+                hello(a);
+                order(a);
+            }
+
+//            hello(client1);
+//            order(client1);
+//            Client.clientQuantity ++;
+
 
 
         }
@@ -64,11 +65,13 @@ public class Restauran {
             Menu.legs -= client.getOrderLegs();
             Menu.potatoes -= client.getOrderPotatoes();
 
-        } else {
-            System.out.println("К сожалению, у нас закончились некоторые позиции в меню, пожалуйста, сделайте заказ заново, учитывая эту информацию.");
-            System.out.println("У нас осталось: крылышек - " + Menu.wings + " , ножек - " + Menu.legs + " , картошки - " + Menu.potatoes);
-            run();
-        }
+//        } else if (Menu.wings = 0 || Menu.legs = 0 || Menu.potatoes = 0) {
+//            System.out.println("К сожалению, у нас закончились некоторые позиции в меню, пожалуйста, сделайте заказ заново, учитывая эту информацию.");
+//            System.out.println("У нас осталось: крылышек - " + Menu.wings + " , ножек - " + Menu.legs + " , картошки - " + Menu.potatoes);
+//            run();
+//        } else if (Client.clientQuantity == 6) {
+//
+     }
 
     }
 
