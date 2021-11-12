@@ -2,10 +2,8 @@ package a_rogatko.lesson10.ticTacToe;
 
 import java.util.Scanner;
 
-public class RunGame {
-
-
-    static void run() {
+public class RunGame{
+    static void run() throws InterruptedException {
 
         Field f = new Field();
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +19,7 @@ public class RunGame {
                 isWinner = true;
 
                 System.out.println("Победили " + (WinChecker.allCheck(f.field)));
+                RunGame.run();
 
             }
 
@@ -29,8 +28,14 @@ public class RunGame {
                 boolean use = false;
                 while (!use) {
                     System.out.println("\nВаш ход");
+                    //test
+                    Thread.sleep(100);
+
                     int a = scanner.nextInt();
                     int b = scanner.nextInt();
+                    //int a = (int)(Math.random()*3)+1;//отладка
+                   // int b = (int)(Math.random()*3)+1;//отладка
+                    System.out.println("$$$$  "+a+"  $$$$$$  "+b);
                     //
 
 
@@ -51,6 +56,7 @@ public class RunGame {
 
             if (!isWinner && steps == 8) {
                 System.out.println("Ничья!");
+                RunGame.run();
             }
         }
 
