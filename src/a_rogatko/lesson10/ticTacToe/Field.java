@@ -3,7 +3,7 @@ package a_rogatko.lesson10.ticTacToe;
 public class Field {
     public char x = '+';//так у нас будет выглядеть крестик
     public char o = 'o';//а так нолик, их можно будет легко поменять на другие символы
-    public char empty = '*';//так будет выглядеть незанятая клетка
+    public static char empty = '*';//так будет выглядеть незанятая клетка
     char[][] field = new char[3][3];//собственно, игровое поле
 
 
