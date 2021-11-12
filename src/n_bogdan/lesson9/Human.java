@@ -3,6 +3,7 @@ package n_bogdan.lesson9;
 public class Human {
     private int age;
     private static int maxAge;
+    Boolean check;
 
 
     //Можно запихнуть кастомную логику

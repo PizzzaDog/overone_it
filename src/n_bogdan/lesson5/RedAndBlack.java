@@ -18,6 +18,8 @@ public class RedAndBlack {
             System.out.println("Сделайте вашу ставку");
             bet = sc.nextInt(); // Записываем ставку
 
+
+            //ПРОВЕРКА СТАВКИ
             if (bet > wallet) { // Проверяем, хватает ли денег
                 System.out.println("ДЕНЯГ НЕТ, НО ВЫ ДЕРЖИТЕСЬ");
                 break; // Выходим из цикла, если денег нет

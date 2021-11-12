@@ -5,19 +5,20 @@ package n_bogdan.lesson1;
  * / - деление
  * - - разница
  * + - сумма
- *
- *  >< - больше/меньше
- *  == - сравнение, равны
- *  || - ИЛИ
- *  && - И
- *
+ * <p>
+ * >< - больше/меньше
+ * == - сравнение, равны
+ * || - ИЛИ
+ * && - И
  */
 public class Main {
     private static int chislo;
 
     public static void main(String[] args) {
         int a = 1;
+        Integer[] mass = new Integer[]{200220, 1231243, 12345135};
         int b = 20;
+        Integer a1 = 5;
         double doubleCheck = 2.0;
         String stroka = "Java guava";
         System.out.print("qweqwe");
