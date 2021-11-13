@@ -16,7 +16,8 @@ public class Main {
         list.add(camel);
         list.add(cat);
         list.add(dog);
-        list.get(0).scream();
+        for(int i = 0; i <list.size(); i++){
+        list.get(i).scream();}
 
     }
 }
