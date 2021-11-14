@@ -4,16 +4,31 @@ import java.util.ArrayList;
 
 public class Tiger {
     private String name;
-    private int age;
+    private String scream;
     private String color;
+    private int age;
 
-    public Tiger(String name, int age, String color) {
+    public Tiger(String name, String scream, String color, int age) {
         this.name = name;
-        this.age = age;
+        this.scream = scream;
         this.color = color;
+        this.age = age;
     }
 
-    public String toString() {
-        return "name = " + name + ", age = " + age + ", color = " + color;
+    public String name() {
+        return name;
     }
+
+    public String scream() {
+        return scream;
+    }
+
+    public String color() {
+        return color;
+    }
+
+    public int age() {
+        return age;
+    }
+
 }
