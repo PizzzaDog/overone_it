@@ -1,4 +1,4 @@
-package b_vitaliy.lesson_12;
+/*package b_vitaliy.lesson_12;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,6 +11,7 @@ public class Main {
         String code = dev.writeCode();
 
         System.out.println(code);
+        }
     }
 
     public static Developer randomizeDev() {
@@ -35,6 +36,9 @@ public class Main {
             default:
                 return new JavaDev();
         }
+
+
     }
 }
 
+*/
