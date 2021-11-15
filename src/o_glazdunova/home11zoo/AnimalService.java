@@ -1,24 +1,20 @@
-package o_glazdunova.Home11;
-
-import o_glazdunova.Home11.zoo.Lion;
-import o_glazdunova.Home11.zoo.Panda;
-import o_glazdunova.Home11.zoo.Tiger;
+package o_glazdunova.home11zoo;
 
 import java.util.ArrayList;
 
 public class AnimalService {
     public static void main(String[] args) {
-        Tiger tiger = new Tiger("Good", 2, "Orance"); // хороший
-        Lion lion = new Lion("Shaggy", 3, "Yellow"); // мохнатый
-        Panda panda = new Panda("Cute", 1, "Black"); // милая
+        o_glazdunova.home11zoo.Tiger tiger = new o_glazdunova.home11zoo.Tiger("Good", 2, "Orance"); // хороший
+        o_glazdunova.home11zoo.Lion lion= new o_glazdunova.home11zoo.Lion("Shaggy", 3, "Yellow"); // мохнатый
+        o_glazdunova.home11zoo.Panda panda = new o_glazdunova.home11zoo.Panda("Cute", 1, "Black"); // милая
 
-        ArrayList<Tiger> listTiger = new ArrayList<>();
+        ArrayList<o_glazdunova.home11zoo.Tiger> listTiger = new ArrayList<>();
         listTiger.add(tiger);
 
-        ArrayList<Lion> listLion = new ArrayList<>();
+        ArrayList<o_glazdunova.home11zoo.Lion> listLion = new ArrayList<>();
         listLion.add(lion);
 
-        ArrayList<Panda> listCamel = new ArrayList<>();
+        ArrayList<o_glazdunova.home11zoo.Panda> listCamel = new ArrayList<>();
         listCamel.add(panda);
 
         AnimalService.scream(tiger);
@@ -26,15 +22,15 @@ public class AnimalService {
         AnimalService.scream(panda);
     }
 
-    private static void scream(Tiger tiger) {
+    private static void scream(o_glazdunova.home11zoo.Tiger tiger) {
         System.out.println(tiger.toString());
     }
 
-    private static void scream(Lion lion) {
+    private static void scream(o_glazdunova.home11zoo.Lion lion) {
         System.out.println(lion.toString());
     }
 
-    private static void scream(Panda panda) {
+    private static void scream(o_glazdunova.home11zoo.Panda panda) {
         System.out.println(panda.toString());
     }
 }
