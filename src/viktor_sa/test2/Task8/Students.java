@@ -1,4 +1,4 @@
-package viktor_sa.Test2.Task8;
+package viktor_sa.test2.Task8;
 
 public interface Students {
     static int MakeBookmarks() {

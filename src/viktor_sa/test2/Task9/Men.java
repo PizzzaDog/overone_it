@@ -1,4 +1,4 @@
-package viktor_sa.Test2.Task9;
+package viktor_sa.test2.Task9;
 
 public class Men extends Human{
     @Override
