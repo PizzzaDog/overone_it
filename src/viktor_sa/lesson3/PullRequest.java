@@ -1,5 +1,4 @@
-package a_rogatko.lesson3;
+package viktor_sa.lesson3;
 
 public class PullRequest {
-
 }
