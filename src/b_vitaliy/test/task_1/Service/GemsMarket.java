@@ -35,7 +35,7 @@ public class GemsMarket {
     }
 
     public void conductBargain() throws InterruptedException {
-        displayConducting();
+        //displayConducting();
         login();
         sellGems();
         buyGems();
@@ -62,7 +62,7 @@ public class GemsMarket {
                     //gems.display();
                 }
             //client.display();
-
+                //gems.display();
             }
         }
 
@@ -75,25 +75,35 @@ public class GemsMarket {
 
     public void sellGems(){
 
-        for(Client client: clientArrayList){
-
+        Gems gems;
+        Client client;
+        int lengthOfGemsArrayList;
+        for(int j = 0; j < clientArrayList.size(); j++){
+            client = clientArrayList.get(j);
 
                 if(login.equals(client.getLogin()) != true) {
-                    for(Gems gems: client.getGemsArrayList()) {
+
+                    //for(Gems gems: client.getGemsArrayList()) {
+                    lengthOfGemsArrayList = client.getGemsArrayList().size();
+                    for(int i = 0; i < lengthOfGemsArrayList; i++) {
+
+                        gems = client.getGemsArrayList().get(0);
+
                         if (gems.getColor() == client.getFavouriteColor()) {
                             gems.setCost(gems.getCost() * 2);
-                            transferIntoGemsMarket(client, gems);
                         }
-                        else{
                             transferIntoGemsMarket(client, gems);
                         }
 
                     }
-                }
+
 
                 else if (login.equals(client.getLogin())) {
                     personSellGems(client);
                 }
+
+
+
 
 
         }
@@ -103,8 +113,11 @@ public class GemsMarket {
     public void personSellGems(Client client){
         Integer amoOfSelledGems;
         Integer costOfSellGems;
-
-        for(Gems gems: client.getGemsArrayList()) {
+        Gems gems;
+        int length  = client.getGemsArrayList().size();
+        for(int i = 0; i < length; i++) {
+            gems = client.getGemsArrayList().get(i);
+            Gems gemsForGemsMarket;
             gems.display();
             Scanner scan = new Scanner(System.in);
             System.out.println("how many gems do you want to sell?");
@@ -114,10 +127,22 @@ public class GemsMarket {
             costOfSellGems = scan.nextInt();
 
             if(gems.getAmoGems()>amoOfSelledGems) {
-                gemsOfGemsMarket.add(gems);
-                gemsOfGemsMarket.get(gemsOfGemsMarket.size() - 1).setCost(costOfSellGems);
-                gemsOfGemsMarket.get(gemsOfGemsMarket.size() - 1).setAmoGems(amoOfSelledGems);
+                gemsForGemsMarket = new Gems();
+                gemsForGemsMarket.setColor(gems.getColor());
+                gemsForGemsMarket.setName(gems.getName());
+
+
+                gemsForGemsMarket.setCost(costOfSellGems);
+                gemsForGemsMarket.setAmoGems(amoOfSelledGems);
+                gemsOfGemsMarket.add(gemsForGemsMarket);
+
                 gems.setAmoGems(gems.getAmoGems() - amoOfSelledGems);
+                //client.addGems(gems);
+
+            }
+            else {
+                transferIntoGemsMarket(client, gems);
+                gemsOfGemsMarket.get(gemsOfGemsMarket.size() - 1).setCost(costOfSellGems);
             }
 
         }
@@ -143,4 +168,10 @@ public class GemsMarket {
         }
     }
 
+
+    public void display(){
+        for(Gems gems: gemsOfGemsMarket ){
+            gems.display();
+        }
+    }
 }

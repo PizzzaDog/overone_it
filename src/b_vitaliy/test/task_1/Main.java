@@ -47,8 +47,11 @@ public class Main {
         System.out.println("\n");
 
         System.out.println("clients after bargain:");
+        System.out.println("");
+        gemsMarket.display();
         client1.display();
         client2.display();
+
 
     }
 }
