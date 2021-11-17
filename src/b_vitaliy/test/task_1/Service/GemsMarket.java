@@ -35,10 +35,10 @@ public class GemsMarket {
     }
 
     public void conductBargain() throws InterruptedException {
-        //displayConducting();
+        displayConducting();
         login();
         sellGems();
-       // buyGems();
+        buyGems();
     }
 
 
@@ -54,13 +54,23 @@ public class GemsMarket {
 
     public void buyGems(){
         for(Client client: clientArrayList){
-            for(Gems gems: gemsOfGemsMarket){
-
-
+            for(Gems gems:gemsOfGemsMarket){
+                if(login.equals(client.getLogin()) != true) {
+                    if(gems.getColor() == client.getFavouriteColor()){
+                      //  transferToClient(client, gems);
+                    }
+                    //gems.display();
+                }
+            //client.display();
 
             }
         }
 
+    }
+
+    public void transferToClient(Client client, Gems gems){
+        client.addGems(gems);
+        gemsOfGemsMarket.remove(gems);
     }
 
     public void sellGems(){
@@ -80,6 +90,7 @@ public class GemsMarket {
 
                     }
                 }
+
                 else if (login.equals(client.getLogin())) {
                     personSellGems(client);
                 }

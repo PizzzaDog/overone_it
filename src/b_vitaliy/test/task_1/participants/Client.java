@@ -74,6 +74,12 @@ public class Client {
         gemsArrayList.remove(gems);
     }
 
+    public void removeGems(Integer gemsID){
+        gemsArrayList.remove(gemsID);
+    }
+    public Integer size(){
+        return gemsArrayList.size();
+    }
 
 
     public void display(){

@@ -11,6 +11,7 @@ public class Gems {
     String color;
     Integer amoGems;
 
+
     public String getName() {
         return name;
     }
