@@ -9,8 +9,7 @@ import java.net.http.HttpResponse;
 public class MyOnwService {
     MyOwnRepository repository;
 
-    public HttpResponse<String> login(HttpRequest request) {
+    public void login(HttpRequest request) {
         repository.getUser("ID");
-        return null;
     }
 }

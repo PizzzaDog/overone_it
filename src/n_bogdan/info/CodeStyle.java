@@ -21,7 +21,6 @@ public class CodeStyle {
     private String name;
     private String nameOfSomeShit;
 
-
     /**
      * Методы:
      * 1. Всегда с маленькой буквы
