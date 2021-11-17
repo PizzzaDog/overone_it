@@ -10,6 +10,9 @@ public class Exchange {
         int money;
         System.out.println("Введите количество денег, на которые вы хотите купить камни " + client.getName());
         money = sc.nextInt();
+        if (client.getWallet() < 0) {
+            return 0;
+        }
         client.setWallet(client.getWallet() - money);
         int exchangeMoney = money / 100;
         money -= exchangeMoney;
@@ -30,7 +33,7 @@ public class Exchange {
         }
     }
 
-    public void choice(Client client) {
+    public int choice(Client client) {
         System.out.println(client.getName() + " выберите, интересующую вас операцию : (выберите 1 для торговли и 2 для обмена)");
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
@@ -40,6 +43,8 @@ public class Exchange {
             System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете обменяться");
 
         }
+        return choice;
+//        System.out.println(client.getName() + " выберите, интересующую вас операцию : (выберите 1 для торговли и 2 для обмена)");
 //        int choice1 = sc.nextInt();
 //        if (choice1 == 1) {
 //            System.out.println(client.getName() + " выберите, интересующую вас операцию : (выберите 1 для торговли и 2 для обмена)");
@@ -47,10 +52,13 @@ public class Exchange {
 ////        } else {
 ////            System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете обменяться");
 ////        }
-//        if(choice==choice1){
-//            System.out.println("Отлично, можете проводить операции");
-//        } else {
-//            System.out.println("Извините, ваши интересы не совпали попробуйте еще раз позже");
-//        }
+//            if (choice == choice1) {
+//                System.out.println("Отлично, можете проводить операции");
+//            } else {
+//                System.out.println("Извините, ваши интересы не совпали попробуйте еще раз позже");
+        // }
+        //}
+
     }
 }
+

@@ -4,6 +4,8 @@ import shukan_stanislaw.lesson_14.Task1.gems.Brilliants;
 import shukan_stanislaw.lesson_14.Task1.gems.Gems;
 import shukan_stanislaw.lesson_14.Task1.gems.Rubies;
 
+import java.util.Scanner;
+
 public class Client {
     private int login;
     private int wallet;
@@ -59,4 +61,5 @@ public class Client {
     public void setName(String name) {
         this.name = name;
     }
+
 }
