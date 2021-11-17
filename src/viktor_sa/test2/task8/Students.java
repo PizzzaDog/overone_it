@@ -1,7 +1,7 @@
-package viktor_sa.test2.Task8;
+package viktor_sa.test2.task8;
 
 public interface Students {
-    static int MakeBookmarks() {
+    static int makeBookmarks() {
         return 0;
     }
 
@@ -9,15 +9,15 @@ public interface Students {
         return null;
     }
 
-    static Boolean DoHomeWork() {
+    static Boolean doHomeWork() {
         return null;
     }
 
-    static int TimeToSleep() {
+    static int timeToSleep() {
         return 0;
     }
 
-    static Boolean ConnectOtherStudents() {
+    static Boolean connectOtherStudents() {
         return null;
     }
 }

@@ -5,41 +5,41 @@ import java.util.Scanner;
 public class Stock extends Stones implements IRulesForStock {
     static Scanner scan = new Scanner(System.in);
 
-    static int countOfDiamondStock = 50;
-    static int countOfRubensStock = 80;
-    static int countOfSapphiresStock = 100;
-    static int walletOfStock = 1000000;
+    int countOfDiamondStock = 50;
+    int countOfRubensStock = 80;
+    int countOfSapphiresStock = 100;
+    int walletOfStock = 1000000;
 
-    static String DiamondStock = countOfDiamondStock + " Бриллиантов, стоимостью " + Stones.coastOfDiamond + "$ за шт.";
-    static String RubensStock = countOfRubensStock + " Рубинов, стоимостью " + Stones.coastOfRuben + "$ за шт.";
-    static String SapphiresStock = countOfSapphiresStock + " Сапфиров, стоимостью " + Stones.coastOfSapphires + "$ за шт.";
+    String DiamondStock = countOfDiamondStock + " Бриллиантов, стоимостью " + Stones.coastOfDiamond + "$ за шт.";
+    String RubensStock = countOfRubensStock + " Рубинов, стоимостью " + Stones.coastOfRuben + "$ за шт.";
+    String SapphiresStock = countOfSapphiresStock + " Сапфиров, стоимостью " + Stones.coastOfSapphires + "$ за шт.";
 
-    static Client client1 = new Client("Bob", "12345", 10000, 20, 50, 700);
-    static Client client2 = new Client("Steve", "54321", 50000, 10, 100, 500);
+    Client client1 = new Client("Bob", "12345", 10000, 20, 50, 700);
+    Client client2 = new Client("Steve", "54321", 50000, 10, 100, 500);
 
-    static String inputLogin;
-    static String inputPass;
+    String inputLogin;
+    String inputPass;
 
-    static int choiceOperation;
+    int choiceOperate;
 
-    static int choiceBuy;
-    static int choiceSell;
-    static int choiceExchange;
-    static int choiceExchangeCurse;
+    int choiceBuy;
+    int choiceSell;
+    int choiceExchange;
+    int choiceExchangeCurse;
 
-    static int choiceBuyDiamond;
-    static int choiceBuyRubens;
-    static int choiceBuySapphires;
+    int choiceBuyDiamond;
+    int choiceBuyRubens;
+    int choiceBuySapphires;
 
-    static int coastBuyDiamond;
-    static int coastBuyRubens;
-    static int coastBuySapphires;
+    int coastBuyDiamond;
+    int coastBuyRubens;
+    int coastBuySapphires;
 
-    static int sumOfExchangeDiamondForRubens;
-    static int sumOfExchangeDiamondForSapphires;
-    static int sumOfExchangeRubensForSapphires;
+    int sumOfExchangeDiamondForRubens;
+    int sumOfExchangeDiamondForSapphires;
+    int sumOfExchangeRubensForSapphires;
 
-    public static void hello() {
+    public void hello() {
         System.out.println("Приветствуем вас, уважаемый пользователь, для участия на торгах вам необходио авторизироваться. Пожалуйста, введите логин и пароль.");
         System.out.print("Логин: ");
         inputLogin = scan.nextLine();
@@ -49,7 +49,7 @@ public class Stock extends Stones implements IRulesForStock {
         System.out.println("Приветствуем, " + equalsLoginAndPass().getLogin());
     }
 
-    public static Client equalsLoginAndPass() {
+    public Client equalsLoginAndPass() {
         if (inputLogin.equals(client1.getLogin()) && inputPass.equals(client1.getPass())) {
             return client1;
 
@@ -62,22 +62,22 @@ public class Stock extends Stones implements IRulesForStock {
         return null;
     }
 
-    public static void choiceOperation() {
+    public void choiceOperation() {
         System.out.println("Выбирете какую опирацию вы хотели бы совершить.");
         System.out.println(" 1. Покупка драгоценных камней. \n 2. Продажа драгоценных камней. \n 3. Обмен драгоценных камней.");
         System.out.println("Пожалуйста, введите номер выбранной вами операции.");
-        choiceOperation = scan.nextInt();
+        choiceOperate = scan.nextInt();
 
-        if (choiceOperation == 1) {
+        if (choiceOperate == 1) {
             buy();
-            clientInformation(equalsLoginAndPass());
+            clientInformation();
             continueOperation();
-        } else if (choiceOperation == 2) {
+        } else if (choiceOperate == 2) {
             sell();
-            clientInformation(equalsLoginAndPass());
-        } else if (choiceOperation == 3) {
+            clientInformation();
+        } else if (choiceOperate == 3) {
             exchange();
-            clientInformation(equalsLoginAndPass());
+            clientInformation();
             continueOperation();
         } else {
             System.out.println("Вы ввели неверный номер операции.");
@@ -85,7 +85,7 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void continueOperation() {
+    public void continueOperation() {
         System.out.println("Хотите совершить еще одну операцию? \n 1. Да. \n 2. Нет.");
         int choose = scan.nextInt();
         if (choose == 1) {
@@ -94,7 +94,7 @@ public class Stock extends Stones implements IRulesForStock {
     }
 
 
-    public static void buy() {
+    public void buy() {
         System.out.println("Итак, вы решили совершить покупку драгоценных камней. В данный момент на бирже есть: ");
         System.out.println("1. " + DiamondStock + '\n' + "2. " + RubensStock + '\n' + "3. " + SapphiresStock);
         System.out.println("Введите под каким номером находится камень, который вы хотите купить.");
@@ -124,35 +124,29 @@ public class Stock extends Stones implements IRulesForStock {
     }
 
 
-    public static void equalsChoiceDiamondWithDiamondStock() {
+    public void equalsChoiceDiamondWithDiamondStock() {
         if (choiceBuyDiamond <= countOfDiamondStock) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
-    public static void equalsChoiceRubenWithRubensStock() {
+    public void equalsChoiceRubenWithRubensStock() {
         if (choiceBuyRubens <= countOfRubensStock) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
-    public static void equalsChoiceSapphiresWithDiamondStock() {
+    public void equalsChoiceSapphiresWithDiamondStock() {
         if (choiceBuySapphires <= countOfSapphiresStock) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
 
-    public static void equalsCoastBuyDiamond() {
+    public void equalsCoastBuyDiamond() {
         if (coastBuyDiamond <= equalsLoginAndPass().getWallet()) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() - coastBuyDiamond);
         } else {
@@ -161,7 +155,7 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void equalsCoastBuyRubens() {
+    public void equalsCoastBuyRubens() {
         if (coastBuyRubens <= equalsLoginAndPass().getWallet()) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() - coastBuyRubens);
         } else {
@@ -170,7 +164,7 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void equalsCoastBuySapphires() {
+    public void equalsCoastBuySapphires() {
         if (coastBuySapphires <= equalsLoginAndPass().getWallet()) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() - coastBuySapphires);
         } else {
@@ -180,7 +174,7 @@ public class Stock extends Stones implements IRulesForStock {
     }
 
 
-    public static void sell() {
+    public void sell() {
         System.out.println("Итак, вы решили совершить продажу драгоценных камней. В данный момент на бирже есть: ");
         System.out.println(DiamondStock + '\n' + RubensStock + '\n' + SapphiresStock);
         System.out.println("Введите под каким номером находится камень, который вы хотите продать.");
@@ -210,34 +204,28 @@ public class Stock extends Stones implements IRulesForStock {
 
     }
 
-    public static void equalsChoiceDiamondWithDiamondClient() {
+    public void equalsChoiceDiamondWithDiamondClient() {
         if (choiceBuyDiamond <= equalsLoginAndPass().getCountOfDiamond()) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
-    public static void equalsChoiceRubenWithRubensClient() {
+    public void equalsChoiceRubenWithRubensClient() {
         if (choiceBuyRubens <= equalsLoginAndPass().getCountOfRubens()) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
-    public static void equalsChoiceSapphiresWithDiamondClient() {
+    public void equalsChoiceSapphiresWithDiamondClient() {
         if (choiceBuySapphires <= equalsLoginAndPass().getCountOfSapphires()) {
-
-        } else {
             System.out.println("Вы ввели недопустимое число камней, пожалуйста, повторите операцию.");
             buy();
         }
     }
 
-    public static void equalsCoastDiamondWithWalletOfStock() {
+    public void equalsCoastDiamondWithWalletOfStock() {
         if (coastBuyDiamond <= walletOfStock) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() + coastBuyDiamond);
         } else {
@@ -246,7 +234,7 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void equalsCoastRubensWithWalletOfStock() {
+    public void equalsCoastRubensWithWalletOfStock() {
         if (coastBuyRubens <= walletOfStock) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() + coastBuyRubens);
         } else {
@@ -255,7 +243,7 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void equalsCoastSapphiresWithWalletOfStock() {
+    public void equalsCoastSapphiresWithWalletOfStock() {
         if (coastBuySapphires <= walletOfStock) {
             equalsLoginAndPass().setWallet(equalsLoginAndPass().getWallet() + coastBuySapphires);
         } else {
@@ -265,7 +253,7 @@ public class Stock extends Stones implements IRulesForStock {
     }
 
 
-    public static void exchange() {
+    public void exchange() {
         System.out.println("Вы решили обменять ваши драгоценные камни на другие, пожалуйста, выберите из списка какой камень вы хотите поменять: ");
         System.out.println("1. Бриллиант.'\n' 2. Рубин. '\n' 3. Сапфир. ");
         choiceExchange = scan.nextInt();
@@ -300,35 +288,29 @@ public class Stock extends Stones implements IRulesForStock {
         }
     }
 
-    public static void equalsSumOfExchangeDiamondForRubens() {
-        if (sumOfExchangeDiamondForRubens <= countOfRubensStock) {
 
-        } else {
+    public void equalsSumOfExchangeDiamondForRubens() {
+        if (sumOfExchangeDiamondForRubens <= countOfRubensStock) {
             System.out.println("К сожалению, у нас нет стольк рубинов, пожалуйста, повторите операцию.");
             exchange();
         }
     }
 
-    public static void equalsSumOfExchangeDiamondForSapphires() {
+    public void equalsSumOfExchangeDiamondForSapphires() {
         if (sumOfExchangeDiamondForSapphires <= countOfSapphiresStock) {
-
-        } else {
             System.out.println("К сожалению, у нас нет стольк сапфиров, пожалуйста, повторите операцию.");
             exchange();
         }
     }
 
-    public static void equalsSumOfExchangeRubensForSapphires() {
+    public void equalsSumOfExchangeRubensForSapphires() {
         if (sumOfExchangeRubensForSapphires <= countOfSapphiresStock) {
-
-        } else {
             System.out.println("К сожалению, у нас нет стольк сапфиров, пожалуйста, повторите операцию.");
             exchange();
         }
     }
 
-
-    public static void clientInformation(Client client) {
-        System.out.println("Ваш баланс составляет: " + Client.wallet + ". Колличесвто бриллиантов: " + Client.countOfDiamondClient + ". Колличесвто рубинов: " + Client.countOfRubensClient + ". Колличество сапфиров: " + Client.countOfSapphiresClient);
+    public void clientInformation() {
+        System.out.println("Ваш баланс составляет: " + equalsLoginAndPass().wallet + ". Колличесвто бриллиантов: " +  equalsLoginAndPass().countOfDiamondClient + ". Колличесвто рубинов: " +  equalsLoginAndPass().countOfRubensClient + ". Колличество сапфиров: " +  equalsLoginAndPass().countOfSapphiresClient);
     }
 }

@@ -1,20 +1,20 @@
 package viktor_sa.test2.task1;
 
 public class Client {
-    static String login;
-    static String pass;
-    static int wallet;
-    static int countOfDiamondClient;
-    static int countOfRubensClient;
-    static int countOfSapphiresClient;
+    String login;
+    String pass;
+    int wallet;
+    int countOfDiamondClient;
+    int countOfRubensClient;
+    int countOfSapphiresClient;
 
     public Client(String login, String pass, int wallet, int countOfDiamond, int countOfRubens, int countOfGolds) {
-        Client.login = login;
-        Client.pass = pass;
-        Client.wallet = wallet;
-        Client.countOfDiamondClient = countOfDiamond;
-        Client.countOfRubensClient = countOfRubens;
-        Client.countOfSapphiresClient = countOfGolds;
+        this.login = login;
+        this.pass = pass;
+        this.wallet = wallet;
+        this.countOfDiamondClient = countOfDiamond;
+        this.countOfRubensClient = countOfRubens;
+        this.countOfSapphiresClient = countOfGolds;
     }
 
     public String getLogin() {
@@ -22,7 +22,7 @@ public class Client {
     }
 
     public void setLogin(String login) {
-        Client.login = login;
+        this.login = login;
     }
 
     public String getPass() {
@@ -30,7 +30,7 @@ public class Client {
     }
 
     public void setPass(String pass) {
-        Client.pass = pass;
+        this.pass = pass;
     }
 
     public int getWallet() {
@@ -38,7 +38,7 @@ public class Client {
     }
 
     public void setWallet(int wallet) {
-        Client.wallet = wallet;
+        this.wallet = wallet;
     }
 
     public int getCountOfDiamond() {
@@ -46,7 +46,7 @@ public class Client {
     }
 
     public void setCountOfDiamond(int countOfDiamond) {
-        Client.countOfDiamondClient = countOfDiamond;
+        this.countOfDiamondClient = countOfDiamond;
     }
 
     public int getCountOfRubens() {
@@ -54,7 +54,7 @@ public class Client {
     }
 
     public void setCountOfRubens(int countOfRubens) {
-        Client.countOfRubensClient = countOfRubens;
+        this.countOfRubensClient = countOfRubens;
     }
 
     public int getCountOfSapphires() {
@@ -62,7 +62,7 @@ public class Client {
     }
 
     public void setCountOfSapphires(int countOfSapphires) {
-        Client.countOfSapphiresClient = countOfSapphires;
+        this.countOfSapphiresClient = countOfSapphires;
     }
 }
 
