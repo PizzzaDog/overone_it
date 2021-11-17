@@ -4,6 +4,9 @@ import n_bogdan.info.arch.service.MyOnwService;
 
 import java.net.http.HttpRequest;
 
+/**
+ * Кстати, это контроллер
+ */
 public class MyOwnController {
     private MyOnwService myOnwService = new MyOnwService();
 
