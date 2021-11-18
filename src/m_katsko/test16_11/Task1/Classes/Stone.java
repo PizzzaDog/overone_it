@@ -1,6 +1,5 @@
 package m_katsko.test16_11.Task1.Classes;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Stone {

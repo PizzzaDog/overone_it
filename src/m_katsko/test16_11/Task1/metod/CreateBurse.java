@@ -4,13 +4,13 @@ import m_katsko.test16_11.Task1.Classes.Burse;
 
 import java.util.Scanner;
 
-public class Create_Burse {
-    public Burse create_burse(){
+public class CreateBurse {
+    public Burse createBurse(){
         Burse burse=new Burse();
         Scanner sc= new Scanner(System.in);
         int n= sc.nextInt();
-        Create_Stoun service= new Create_Stoun();
-        service.create_array_stone(n);
+        CreateStoun service= new CreateStoun();
+        service.createArrayStone(n);
 return burse;
     }
 }
