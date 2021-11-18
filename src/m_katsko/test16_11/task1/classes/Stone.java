@@ -1,4 +1,4 @@
-package m_katsko.test16_11.Task1.Classes;
+package m_katsko.test16_11.task1.classes;
 
 import java.util.Scanner;
 
@@ -23,11 +23,11 @@ public class Stone {
         this.title = title;
     }
 
-    public double getAverage_price() {
+    public double getAveragePrice() {
         return price;
     }
 
-    public void setAverage_price(double price) {
+    public void setAveragePrice(double price) {
         this.price = price;
     }
 

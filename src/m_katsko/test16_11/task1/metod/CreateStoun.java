@@ -1,9 +1,8 @@
-package m_katsko.test16_11.Task1.metod;
+package m_katsko.test16_11.task1.metod;
 
-import m_katsko.test16_11.Task1.Classes.Stone;
+import m_katsko.test16_11.task1.classes.Stone;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CreateStoun {
 

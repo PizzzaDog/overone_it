@@ -1,4 +1,4 @@
-package m_katsko.test16_11.Task9;
+package m_katsko.test16_11.task9;
 
 public class Son extends Parents{
     private int age;

@@ -1,4 +1,4 @@
-package m_katsko.test16_11.Task1.Classes;
+package m_katsko.test16_11.task1.classes;
 
 import java.util.ArrayList;
 

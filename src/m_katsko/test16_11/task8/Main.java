@@ -1,4 +1,4 @@
-package m_katsko.test16_11.Task8;
+package m_katsko.test16_11.task8;
 
 public class Main {
     public static void main(String[] args){
