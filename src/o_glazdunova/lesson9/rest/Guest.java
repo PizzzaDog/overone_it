@@ -6,7 +6,9 @@ public class Guest {
 
     //создаем конструктор для этих методов (Alt+Insert, потом выделяем Shift,если нужно 2 и более строки выбрать и ОК)
 
-    public Guest(int wallet, String name) { //если сначала идет инт а потом стринга их нельзя менять местами, будут разные результаты
+    public Guest(int wallet, String name) { //если сначала идет инт а потом стринга их нельзя менять местами,
+        // будут разные результаты
+
         this.wallet = wallet;
         this.name = name;
     }
