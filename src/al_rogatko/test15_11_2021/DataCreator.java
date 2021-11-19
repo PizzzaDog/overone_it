@@ -7,12 +7,12 @@ package al_rogatko.test15_11_2021;
 
 import java.util.ArrayList;
 
-public class DataOnly {
+public class DataCreator {
     public static ArrayList<Stone> marketList = new ArrayList();
     public static ArrayList<Stone> client1list = new ArrayList();
     public static ArrayList<Stone> client2list = new ArrayList();
 
-    public DataOnly() {
+    public DataCreator() {
     }
 
     static void lists() {
