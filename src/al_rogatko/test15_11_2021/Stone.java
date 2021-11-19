@@ -1,11 +1,10 @@
 package al_rogatko.test15_11_2021;
 
 
-
 public class Stone {
     String type;
-    int price;
-    int size;
+    final int price;
+    final int size;
 
     public String getType() {
         return this.type;
@@ -24,5 +23,7 @@ public class Stone {
         this.price = price;
         this.size = size;
     }
-}
+
+    }
+
 

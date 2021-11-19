@@ -39,7 +39,7 @@ public class Action {
         System.out.println("Input positions for exchange ");
         int a = scanner.nextInt() - 1;
         int b = scanner.nextInt() - 1;
-        int different = x.list.get(a).price - y.list.get(b).price;
+        int different = x.list.get(a).getPrice() - y.list.get(b).getPrice();
         x.setMoney(x.getMoney() + different);
         y.setMoney(y.getMoney() - different);
         x.list.add(y.list.get(b));
