@@ -79,9 +79,7 @@ public class Client {
     public void removeGems(Integer gemsID){
         gemsArrayList.remove(gemsID);
     }
-    public Integer size(){
-        return gemsArrayList.size();
-    }
+
 
     public void display(){
         System.out.println(name + ":");
@@ -95,4 +93,5 @@ public class Client {
             }
         }
     }
+
 }

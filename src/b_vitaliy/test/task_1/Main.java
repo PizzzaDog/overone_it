@@ -51,6 +51,7 @@ public class Main {
         System.out.println("gems in storage:");
         gemsMarket.display();
         client1.display();
+        System.out.println();
         client2.display();
 
 
