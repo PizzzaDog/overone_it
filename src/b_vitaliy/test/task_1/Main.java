@@ -27,7 +27,7 @@ public class Main {
         client1.addGems(emiraldOfClient1);
         client1.addGems(diamondsOfClient1);
 
-        Client client2 = new Client("8811","Mike","green", 8000);
+        Client client2 = new Client("8811","Mike","blue", 8000);
         Rubys rubysOfClient2 = new Rubys(810, 10);
         Diamonds diamondsOfClient2 = new Diamonds(400,8);
 
@@ -44,10 +44,11 @@ public class Main {
         client2.display();
 
         gemsMarket.conductBargain();
-        System.out.println("\n");
+        System.out.println("");
 
         System.out.println("clients after bargain:");
         System.out.println("");
+        System.out.println("gems in storage:");
         gemsMarket.display();
         client1.display();
         client2.display();

@@ -35,7 +35,8 @@ public class GemsMarket {
     }
 
     public void conductBargain() throws InterruptedException {
-        //displayConducting();
+        displayConducting();
+        System.out.println();
         login();
         sellGems();
         buyGems();
@@ -52,20 +53,67 @@ public class GemsMarket {
     }
 
 
-    public void buyGems(){
-        for(Client client: clientArrayList){
-            for(Gems gems:gemsOfGemsMarket){
-                if(login.equals(client.getLogin()) != true) {
-                    if(gems.getColor() == client.getFavouriteColor()){
-                      //  transferToClient(client, gems);
+    public void buyGems() {
+        Client client;
+        Gems gems;
+        int lengthOfGemsArrayList;
+        Integer amoOfBoughtGems;
+
+        Gems gemsForPerson;
+        lengthOfGemsArrayList = gemsOfGemsMarket.size();
+
+        int j;
+        for (j = lengthOfGemsArrayList - 1; j >= 0; j--) {
+            gems = gemsOfGemsMarket.get(j);
+            for (int i = 0; i < clientArrayList.size(); i++) {
+                client = clientArrayList.get(i);
+
+                if (login.equals(client.getLogin()) != true) {
+
+
+                    if (gems.getColor().equals(client.getFavouriteColor())) {
+
+                        amoOfBoughtGems = client.getBudget() / gems.getCost();
+
+                        if (gems.getAmoGems() > amoOfBoughtGems) {
+                            gemsForPerson = new Gems();
+                            gemsForPerson.setColor(gems.getColor());
+                            gemsForPerson.setCost(gems.getCost());
+                            gemsForPerson.setName(gems.getName());
+                            gemsForPerson.setAmoGems(amoOfBoughtGems);
+
+                            gems.setAmoGems(gems.getAmoGems() - amoOfBoughtGems);
+
+
+                            client.addGems(gemsForPerson);
+                            takeMoneyForGems(client, gems);
+
+                        } else {
+                            takeMoneyForGems(client, gems);
+                            transferToClient(client, gems);
+                        }
                     }
-                    //gems.display();
+
+                } else {
+                    //personBuyGems();
                 }
-            //client.display();
-                //gems.display();
+
+
+            }
+
+        }
+    }
+
+    public void takeMoneyForGems(Client payer, Gems gems){
+
+        payer.setBudget(payer.getBudget() - gems.getCost()*gems.getAmoGems());
+
+        for (int i = 0; i < clientArrayList.size();i++){
+            if (clientArrayList.get(i).getLogin().equals(gems.getSellerLogin())){
+                clientArrayList.get(i).setBudget(clientArrayList.get(i).getBudget()+gems.getCost()*gems.getAmoGems());
+                break;
             }
         }
-
     }
 
     public void transferToClient(Client client, Gems gems){
@@ -83,16 +131,17 @@ public class GemsMarket {
 
                 if(login.equals(client.getLogin()) != true) {
 
-                    //for(Gems gems: client.getGemsArrayList()) {
                     lengthOfGemsArrayList = client.getGemsArrayList().size();
                     for(int i = 0; i < lengthOfGemsArrayList; i++) {
 
                         gems = client.getGemsArrayList().get(0);
 
-                        if (gems.getColor() == client.getFavouriteColor()) {
+                        if (gems.getColor().equals(client.getFavouriteColor())) {
                             gems.setCost(gems.getCost() * 2);
                         }
-                            transferIntoGemsMarket(client, gems);
+                        gems.setSellerLogin(client.getLogin());
+                        transferIntoGemsMarket(client, gems);
+
                         }
 
                     }
@@ -134,15 +183,14 @@ public class GemsMarket {
 
                 gemsForGemsMarket.setCost(costOfSellGems);
                 gemsForGemsMarket.setAmoGems(amoOfSelledGems);
-                gemsOfGemsMarket.add(gemsForGemsMarket);
+
+                gems.setSellerLogin(client.getLogin());
 
                 gems.setAmoGems(gems.getAmoGems() - amoOfSelledGems);
-                //client.addGems(gems);
 
             }
             else {
-                transferIntoGemsMarket(client, gems);
-                gemsOfGemsMarket.get(gemsOfGemsMarket.size() - 1).setCost(costOfSellGems);
+                gems.setSellerLogin(client.getLogin());
             }
 
         }

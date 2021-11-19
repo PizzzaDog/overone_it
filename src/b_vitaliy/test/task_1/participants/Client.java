@@ -3,7 +3,6 @@ package b_vitaliy.test.task_1.participants;
 import b_vitaliy.test.task_1.gems.Gems;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 /*
 
@@ -17,6 +16,9 @@ public class Client {
     String favouriteColor;
     Integer budget;
     ArrayList<Gems> gemsArrayList = new ArrayList<Gems>();
+
+    public Client() {
+    }
 
     public Client(String login, String name, String favouriteColor, Integer budget, ArrayList<Gems> gems) {
         this.login = login;
@@ -81,13 +83,12 @@ public class Client {
         return gemsArrayList.size();
     }
 
-
     public void display(){
         System.out.println(name + ":");
         System.out.println("favourite color: " + favouriteColor);
         System.out.println("budget: " + budget);
         System.out.println("gems:");
-        if (gemsArrayList.size()>1) {
+        if (gemsArrayList.size()>0) {
             for (Gems gems : gemsArrayList) {
                 System.out.print(" ");
                 gems.display();

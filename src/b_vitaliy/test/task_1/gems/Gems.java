@@ -10,6 +10,15 @@ public class Gems {
     Integer cost;
     String color;
     Integer amoGems;
+    String sellerLogin;
+
+    public String getSellerLogin() {
+        return sellerLogin;
+    }
+
+    public void setSellerLogin(String sellerLogin) {
+        this.sellerLogin = sellerLogin;
+    }
 
     public Gems() {
     }
@@ -58,6 +67,7 @@ public class Gems {
     public void reduceGems(Integer amoOfReducedGems){
         this.amoGems -= amoOfReducedGems;
     }
+
 
     public void display(){
         System.out.println(name + ":" + "cost - " + cost + "; color - " + color + "; amount - "+ amoGems + ";");
