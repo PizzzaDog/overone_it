@@ -16,7 +16,7 @@ public class DataOnly {
     }
 
     static void lists() {
-        marketList = generator(10);
+        marketList = generator(5);
         client1list = generator(3);
         client2list = generator(4);
     }
