@@ -14,8 +14,7 @@ public class Client {
     private String name;
 
 
-
-    public Client(int login, String name,int wallet, int br, int rub) {
+    public Client(int login, String name, int wallet, int br, int rub) {
         this.login = login;
         this.wallet = wallet;
         this.br = br;
@@ -54,6 +53,7 @@ public class Client {
     public void setRub(int rub) {
         this.rub = rub;
     }
+
     public String getName() {
         return name;
     }

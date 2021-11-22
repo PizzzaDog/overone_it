@@ -1,25 +1,44 @@
 package shukan_stanislaw.lesson_14.Task1.service;
 
 import shukan_stanislaw.lesson_14.Task1.Client.Client;
+import shukan_stanislaw.lesson_14.Task1.gems.Brilliants;
+import shukan_stanislaw.lesson_14.Task1.gems.Rubies;
 
 import java.util.Scanner;
 
 public class Exchange {
-    public int moneyToTrade(Client client, int br, int rub) {
+
+
+    public int moneyToTrade(Client client) {
         Scanner sc = new Scanner(System.in);
-        int money;
         System.out.println("Введите количество денег, на которые вы хотите купить камни " + client.getName());
-        money = sc.nextInt();
+         int money = sc.nextInt();
         if (client.getWallet() < 0) {
+            System.out.println("У вас не хватает денег!");
             return 0;
         }
         client.setWallet(client.getWallet() - money);
-        int exchangeMoney = money / 100;
+        int exchangeMoney = money / 100;//кол-во денег которое забирает биржа после каждой сделки
         money -= exchangeMoney;
         System.out.println(client.getWallet());
 //        System.out.println(exchangeMoney);
 //        System.out.println(money);
-        return br;
+        return money;
+    }
+    public int rubiesAndBrilliantsToTrade(Client client, int rub, int br){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите количество рубинов, которые вы хотите обменять: " + client.getName() );
+        int rubies = sc.nextInt();
+        client.setRub(client.getRub() - rubies);
+        if(client.getRub()<0){
+            System.out.println("У вас не хватает рубинов, чтобы обмениваться " + client.getName());
+        }
+        int exchangeRubies = rubies/20;
+        rubies -=exchangeRubies;
+        System.out.println(client.getRub());
+
+
+        return rubies;
     }
 
     public void authorization(Client client) {
@@ -41,23 +60,10 @@ public class Exchange {
             System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете поторговаться");
         } else {
             System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете обменяться");
-
         }
         return choice;
-//        System.out.println(client.getName() + " выберите, интересующую вас операцию : (выберите 1 для торговли и 2 для обмена)");
-//        int choice1 = sc.nextInt();
-//        if (choice1 == 1) {
-//            System.out.println(client.getName() + " выберите, интересующую вас операцию : (выберите 1 для торговли и 2 для обмена)");
-////            System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете поторговаться");
-////        } else {
-////            System.out.println("Отличный выбор, сейчас подберем человека с которым вы можете обменяться");
-////        }
-//            if (choice == choice1) {
-//                System.out.println("Отлично, можете проводить операции");
-//            } else {
-//                System.out.println("Извините, ваши интересы не совпали попробуйте еще раз позже");
-        // }
-        //}
+
+
 
     }
 }
