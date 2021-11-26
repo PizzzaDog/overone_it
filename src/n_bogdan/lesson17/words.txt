@@ -1,0 +1,11 @@
+Steve-100
+Bob-200
+Frank-500
+Jim-700
+Beam-1000
+---
+Steve-1.2
+Bob-1.0
+Frank-1.5
+Jim-2.0
+Beam-5.0
