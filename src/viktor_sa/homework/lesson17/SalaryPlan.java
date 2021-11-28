@@ -11,9 +11,6 @@ public class SalaryPlan {
         this.salaryAfter = salaryAfter;
     }
 
-    public SalaryPlan() {
-    }
-
     public Integer getSalaryBefore() {
         return salaryBefore;
     }
