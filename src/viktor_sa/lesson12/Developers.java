@@ -3,7 +3,7 @@ package viktor_sa.lesson12;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Run {
+public class Developers {
     public static void main(String[] args) {
         Developer dev = randomizeDev();
         String code = dev.writeCode();
