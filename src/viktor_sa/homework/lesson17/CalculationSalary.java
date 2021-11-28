@@ -21,16 +21,19 @@ public class CalculationSalary {
             lines.add(scan.next());
         }
 
+        // цикл для заполнения листа name значениями name из файла salary_homework
         for (int i = lines.indexOf("---") + 1; i < lines.size(); i++) {
             String[] keyValue = lines.get(i).split("-");
             name.add(keyValue[0]);
         }
 
+        // цикл для заполнения мапы salariesBefore значениями salary before из файла salary_homework
         for (int k = 0; k < lines.indexOf("---"); k++) {
             String[] keyValue = lines.get(k).split("-");
             salariesBefore.put(keyValue[0], Integer.valueOf(keyValue[1]));
         }
 
+        // цикл для заполнения мапы coefficient значениями coefficient из файла salary_homework
         for (int i = lines.indexOf("---") + 1; i < lines.size(); i++) {
             String[] keyValue = lines.get(i).split("-");
             coefficient.put(keyValue[0], Double.valueOf(keyValue[1]));
