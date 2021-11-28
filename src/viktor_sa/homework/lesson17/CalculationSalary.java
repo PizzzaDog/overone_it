@@ -17,7 +17,6 @@ public class CalculationSalary {
         Map<String, SalaryPlan> salaryPlanMap = new HashMap<>();
         List<String> name = new ArrayList<>();
 
-
         while (scan.hasNextLine()) {
             lines.add(scan.next());
         }
@@ -48,17 +47,12 @@ public class CalculationSalary {
         SalaryPlan salaryPeoples4 = new SalaryPlan(salariesBefore.get(name.get(3)), coefficient.get(name.get(3)), salaryAfter.get(3));
         SalaryPlan salaryPeoples5 = new SalaryPlan(salariesBefore.get(name.get(4)), coefficient.get(name.get(4)), salaryAfter.get(4));
 
-
         salaryPlanMap.put(name.get(0), salaryPeoples1);
         salaryPlanMap.put(name.get(1), salaryPeoples2);
         salaryPlanMap.put(name.get(2), salaryPeoples3);
         salaryPlanMap.put(name.get(3), salaryPeoples4);
         salaryPlanMap.put(name.get(4), salaryPeoples5);
 
-
         salaryPlanMap.forEach((String, SalaryPlan) -> System.out.println("Name: " + String + ", salary before: " + SalaryPlan.getSalaryBefore() + ", salary coefficient: " + SalaryPlan.getCoefficient() + ", salary after: " + SalaryPlan.getSalaryAfter()));
-
     }
-
-
 }

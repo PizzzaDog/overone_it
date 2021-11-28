@@ -12,7 +12,6 @@ public class SalaryPlan {
     }
 
     public SalaryPlan() {
-
     }
 
     public Integer getSalaryBefore() {
