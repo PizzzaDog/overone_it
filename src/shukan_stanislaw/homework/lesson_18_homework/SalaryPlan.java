@@ -37,4 +37,5 @@ class SalaryPlan {
 
     public SalaryPlan() {
     }
+
 }

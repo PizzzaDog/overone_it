@@ -61,6 +61,7 @@ class Main {
 
         for(Map.Entry<String,SalaryPlan> qwe:salaryPlanMap.entrySet()){
             System.out.println("Name: "+ qwe.getKey()+", "+"salary before: "+ qwe.getValue().getSalaryBefore()+ ", "+"coefficient: "+ qwe.getValue().getCoefficient()+ ", "+"salary after: "+qwe.getValue().getSalaryAfter());
+
         }
     }
 }
