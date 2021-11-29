@@ -48,10 +48,6 @@ public class Parser {
 
 
         //TODO ФИНАЛЬНЫЙ ВИД HASHMAP
-
-        Map<String, SalaryPlan> result;
-
-
-
+        Map<String, Object> result;
     }
 }
