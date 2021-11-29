@@ -1,0 +1,15 @@
+Steve-100
+Bob-200
+Frank-500
+Jim-700
+Beam-1000
+Aleksi-1200
+Sergej-1500
+---
+Steve-1.0
+Bob-1.2
+Frank-1.5
+Jim-2.0
+Beam-2.2
+Aleksi-2.5
+Sergej-3.0

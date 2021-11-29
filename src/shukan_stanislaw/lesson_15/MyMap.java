@@ -86,7 +86,7 @@ class MyMap {
         myMap.remove("qwe", tsaTsa);
 
 
-        //Достать по ключю. НО если по ключу ничего нет, достается "запасной" Dog
+        //Достать по ключу. НО если по ключу ничего нет, достается "запасной" Dog
         System.out.println(myMap.getOrDefault(key, tsaTsa).getName());
 
 
