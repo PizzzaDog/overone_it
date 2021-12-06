@@ -1,8 +1,6 @@
 package viktor_sa.homework.restaran;
 
 public class Client {
-    static int clientQuantity = 0;
-    static int maxClients = 5;
     static String name;
     static int orderWings;
     static int orderLegs;
@@ -16,7 +14,7 @@ public class Client {
     }
 
     public void setName(String name) {
-        this.name = name;
+        Client.name = name;
     }
 
     public int getOrderWings() {
@@ -24,7 +22,7 @@ public class Client {
     }
 
     public void setOrderWings(int orderWings) {
-        this.orderWings = orderWings;
+        Client.orderWings = orderWings;
     }
 
     public int getOrderLegs() {
@@ -32,7 +30,7 @@ public class Client {
     }
 
     public void setOrderLegs(int orderLegs) {
-        this.orderLegs = orderLegs;
+        Client.orderLegs = orderLegs;
     }
 
     public int getOrderPotatoes() {
@@ -40,6 +38,7 @@ public class Client {
     }
 
     public void setOrderPotatoes(int orderPotatoes) {
-        this.orderPotatoes = orderPotatoes;
+        Client.orderPotatoes = orderPotatoes;
     }
+
 }

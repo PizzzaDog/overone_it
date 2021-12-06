@@ -1,16 +1,11 @@
 package viktor_sa.homework.restaran;
-
 import java.util.Scanner;
 
-
 public class Restauran {
-    static Scanner scan = new Scanner(System.in);
-
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         run();
-
-
     }
 
     static Client client1 = new Client();
@@ -19,60 +14,50 @@ public class Restauran {
     static Client client4 = new Client();
     static Client client5 = new Client();
 
-    static Client[] clients = new Client[] {client1, client2, client3, client4, client5};
-
-//    static Client[] clientsName = new Client[Client.maxClients];
-//    static Client[] clientsOrderWings = new Client[Client.maxClients];
-//    static Client[] clientsOrderLegs = new Client[Client.maxClients];
-//    static Client[] clientsOrderPotatoes = new Client[Client.maxClients];
-
-
     private static void run() {
 
-        while (Menu.wings != 0 || Menu.legs != 0 || Menu.potatoes != 0 || Client.clientQuantity < 6) {
-            for(Client a : clients) {
-                hello(a);
-                order(a);
+        Client[] clientsArray = new Client[] {client1, client2, client3, client4, client5};
+
+
+        while (Menu.wings != 0 || Menu.legs != 0 || Menu.potatoes != 0) {
+            for (int i = 0; i < clientsArray.length; i++) {
+                hello(clientsArray[i]);
+                order(clientsArray[i]);
+
             }
-
-//            hello(client1);
-//            order(client1);
-//            Client.clientQuantity ++;
-
-
-
         }
-        System.out.println("Имя клиента: " + client1.getName() + " Количество крылышек: " + client1.getOrderWings() + " Количесвто ножек: " + client1.getOrderLegs() + " Количество картошки: " + client1.getOrderPotatoes());
+//        System.out.println("Имя клиента: " + client.getName() + " Количество крылышек: " + client.getOrderWings() + " Количесвто ножек: " + client.getOrderLegs() + " Количество картошки: " + client.getOrderPotatoes());
+
     }
 
 
     private static void hello(Client client) {
-        System.out.print("Приветсвуем Вас! Скажите, на какое имя делаем заказ? ");
-        client.setName(scan.next());
+        System.out.println("Приветсвуем Вас! Скажите, на какое имя делаем заказ? ");
+        client.setName(scanner.nextLine());
     }
 
     private static void order(Client client) {
         System.out.println("Пожалуйста, " + client.getName() + ", сделайте ваш заказ. Сегодня у нас в меню есть куриные крылышки, ножки и картошка фри.");
         System.out.println("Скажите, сколько вы будете крылышек?");
-        client.setOrderWings(scan.nextInt());
+        client.setOrderWings(scanner.nextInt());
         System.out.println("Скажите, сколько вы будете ножек?");
-        client.setOrderLegs(scan.nextInt());
+        client.setOrderLegs(scanner.nextInt());
         System.out.println("Скажите, сколько вы будете картошки?");
-        client.setOrderPotatoes(scan.nextInt());
+        client.setOrderPotatoes(scanner.nextInt());
 
         if (Client.orderWings <= Menu.wings && Client.orderLegs <= Menu.legs && Client.orderPotatoes <= Menu.potatoes) {
             Menu.wings -= client.getOrderWings();
             Menu.legs -= client.getOrderLegs();
             Menu.potatoes -= client.getOrderPotatoes();
-
-//        } else if (Menu.wings = 0 || Menu.legs = 0 || Menu.potatoes = 0) {
-//            System.out.println("К сожалению, у нас закончились некоторые позиции в меню, пожалуйста, сделайте заказ заново, учитывая эту информацию.");
-//            System.out.println("У нас осталось: крылышек - " + Menu.wings + " , ножек - " + Menu.legs + " , картошки - " + Menu.potatoes);
-//            run();
-//        } else if (Client.clientQuantity == 6) {
-//
-     }
+        } else {
+            System.out.println("К сожалению, у нас закончились некоторые позиции в меню, пожалуйста, сделайте ваш заказ снова. \n");
+            run();
+        }
 
     }
+
+//    private static void chek(Client client) {
+//
+//    }
 
 }
