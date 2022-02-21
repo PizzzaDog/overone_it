@@ -1,0 +1,6 @@
+Steve-100
+Bob-200
+Frank-500
+Jim-700
+Beam-1000
+Aleksi-1000
